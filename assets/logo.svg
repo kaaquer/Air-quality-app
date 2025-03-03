@@ -1,0 +1,18 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="18" cy="18" r="18" fill="#E8F5E9"/>
+  
+  <!-- Leaf Shape -->
+  <path d="M18 8C14 8 10 12 10 16C10 20 14 24 18 24C22 24 26 20 26 16C26 12 22 8 18 8ZM18 22C15.2 22 12 19.8 12 16C12 12.2 15.2 10 18 10C20.8 10 24 12.2 24 16C24 19.8 20.8 22 18 22Z" 
+        fill="#4CAF50"/>
+  
+  <!-- Air Wave Lines -->
+  <path d="M14 16C14 16 16 14 18 14C20 14 22 16 22 16" 
+        stroke="#4CAF50" 
+        stroke-width="2" 
+        stroke-linecap="round"/>
+  <path d="M14 19C14 19 16 17 18 17C20 17 22 19 22 19" 
+        stroke="#4CAF50" 
+        stroke-width="2" 
+        stroke-linecap="round"/>
+</svg> 

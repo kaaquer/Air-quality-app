@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Quality Insights | Urban Health</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="assets/logo.svg" alt="Urban Health Logo">
+            <span>Urban Health</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="insights.html" class="active">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Insights</span>
+                </a>
+            </li>
+            <li>
+                <a href="recommendations.html">
+                    <i class="fas fa-heart"></i>
+                    <span>Health</span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="page-transition-wrapper">
+        <main class="insights-page">
+            <header class="page-header">
+                <div class="header-content">
+                    <h1>Air Quality Insights</h1>
+                    <p class="subtitle">Historical data and trends for your area</p>
+                </div>
+                <div class="time-range-selector">
+                    <button class="time-btn active" data-range="24h">24h</button>
+                    <button class="time-btn" data-range="7d">7 Days</button>
+                    <button class="time-btn" data-range="1m">1 Month</button>
+                    <button class="time-btn" data-range="1y">1 Year</button>
+                </div>
+            </header>
+
+            <div class="insights-grid">
+                <section class="map-section">
+                    <div class="section-header">
+                        <h2>Air Quality Map</h2>
+                        <div class="map-controls">
+                            <button class="map-control active" data-layer="aqi">AQI</button>
+                            <button class="map-control" data-layer="pm25">PM2.5</button>
+                            <button class="map-control" data-layer="pm10">PM10</button>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <div id="map" class="interactive-map"></div>
+                        <div class="map-legend">
+                            <h3>AQI Levels</h3>
+                            <ul class="legend-items">
+                                <li class="legend-item good">Good (0-50)</li>
+                                <li class="legend-item moderate">Moderate (51-100)</li>
+                                <li class="legend-item unhealthy">Unhealthy (101-150)</li>
+                                <li class="legend-item hazardous">Hazardous (151+)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="trends-section">
+                    <div class="section-header">
+                        <h2>Historical Trends</h2>
+                        <div class="chart-controls">
+                            <select id="metricSelect" class="metric-select">
+                                <option value="aqi">Air Quality Index</option>
+                                <option value="pm25">PM2.5</option>
+                                <option value="pm10">PM10</option>
+                                <option value="temp">Temperature</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </section>
+
+                <section class="stats-section">
+                    <h2>Key Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>Average AQI</h3>
+                                <p class="stat-value" id="avgAQI">45</p>
+                                <p class="stat-trend positive">↑ 5% vs last period</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>Peak Hours</h3>
+                                <p class="stat-value">2PM - 5PM</p>
+                                <p class="stat-description">Highest pollution levels</p>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <div class="stat-content">
+                                <h3>Best Air Quality</h3>
+                                <p class="stat-value">5AM - 8AM</p>
+                                <p class="stat-description">Recommended outdoor time</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="patterns-section">
+                    <h2>Weekly Patterns</h2>
+                    <div class="patterns-grid">
+                        <div class="pattern-card">
+                            <h3>Weekday vs Weekend</h3>
+                            <div class="pattern-chart">
+                                <canvas id="weekdayChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="pattern-card">
+                            <h3>Daily Variation</h3>
+                            <div class="pattern-chart">
+                                <canvas id="dailyChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <script src="js/insights.js"></script>
+</body>
+</html> 

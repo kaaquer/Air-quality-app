@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile | Urban Health</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="assets/logo.svg" alt="Urban Health Logo">
+            <span>Urban Health</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="insights.html">Air Quality Insights</a></li>
+            <li><a href="recommendations.html">Health Tips</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+    </nav>
+    <div class="page-transition-wrapper">
+        <main class="profile-page">
+            <div class="profile-container">
+                <aside class="profile-sidebar">
+                    <div class="profile-header">
+                        <div class="profile-avatar-wrapper">
+                            <img src="assets/avatar-placeholder.jpg" alt="User avatar" class="profile-avatar">
+                            <button class="edit-avatar">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                        <h1>John Doe</h1>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> New York, USA</p>
+                    </div>
+                    <nav class="profile-nav">
+                        <a href="#personal" class="active"><i class="fas fa-user"></i> Personal Info</a>
+                        <a href="#health"><i class="fas fa-heart"></i> Health Profile</a>
+                        <a href="#notifications"><i class="fas fa-bell"></i> Notifications</a>
+                        <a href="#preferences"><i class="fas fa-cog"></i> Preferences</a>
+                    </nav>
+                </aside>
+
+                <div class="profile-content">
+                    <section id="personal" class="profile-section">
+                        <h2>Personal Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" value="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="john.doe@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" value="+1 (555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" value="New York, USA">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="health" class="profile-section">
+                        <h2>Health Profile</h2>
+                        <div class="health-conditions">
+                            <h3>Medical Conditions</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" checked>
+                                    <span>Asthma</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span>Allergies</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span>Heart Condition</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span>Respiratory Issues</span>
+                                </label>
+                            </div>
+                            <button class="add-condition">
+                                <i class="fas fa-plus"></i> Add Condition
+                            </button>
+                        </div>
+                        <div class="emergency-contacts">
+                            <h3>Emergency Contact</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="emergencyName">Contact Name</label>
+                                    <input type="text" id="emergencyName" value="Jane Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="emergencyRelation">Relationship</label>
+                                    <input type="text" id="emergencyRelation" value="Spouse">
+                                </div>
+                                <div class="form-group">
+                                    <label for="emergencyPhone">Phone</label>
+                                    <input type="tel" id="emergencyPhone" value="+1 (555) 987-6543">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="notifications" class="profile-section">
+                        <h2>Notification Settings</h2>
+                        <div class="notification-preferences">
+                            <div class="notification-group">
+                                <h3>Alert Thresholds</h3>
+                                <div class="slider-group">
+                                    <label>
+                                        AQI Alert Level
+                                        <div class="slider-with-value">
+                                            <input type="range" min="0" max="200" value="100">
+                                            <span class="slider-value">100</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="notification-group">
+                                <h3>Notification Methods</h3>
+                                <div class="toggle-group">
+                                    <label class="toggle-label">
+                                        <span>Push Notifications</span>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </div>
+                                    </label>
+                                    <label class="toggle-label">
+                                        <span>Email Alerts</span>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox" checked>
+                                            <span class="toggle-slider"></span>
+                                        </div>
+                                    </label>
+                                    <label class="toggle-label">
+                                        <span>SMS Alerts</span>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="preferences" class="profile-section">
+                        <h2>App Preferences</h2>
+                        <div class="preferences-grid">
+                            <div class="preference-group">
+                                <h3>Display</h3>
+                                <div class="toggle-group">
+                                    <label class="toggle-label">
+                                        <span>Dark Mode</span>
+                                        <div class="toggle-switch">
+                                            <input type="checkbox">
+                                            <span class="toggle-slider"></span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="preference-group">
+                                <h3>Units</h3>
+                                <div class="radio-group">
+                                    <label class="radio-label">
+                                        <input type="radio" name="units" checked>
+                                        <span>Metric (°C, km)</span>
+                                    </label>
+                                    <label class="radio-label">
+                                        <input type="radio" name="units">
+                                        <span>Imperial (°F, mi)</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="preference-group">
+                                <h3>Language</h3>
+                                <select class="language-select">
+                                    <option value="en">English</option>
+                                    <option value="es">Español</option>
+                                    <option value="fr">Français</option>
+                                    <option value="de">Deutsch</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="profile-actions">
+                        <button class="btn-secondary">Cancel</button>
+                        <button class="btn-primary">Save Changes</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html> 

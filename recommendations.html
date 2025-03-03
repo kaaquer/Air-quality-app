@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tips | Urban Health</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="logo">
+            <img src="assets/logo.svg" alt="Urban Health Logo">
+            <span>Urban Health</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="insights.html">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Insights</span>
+                </a>
+            </li>
+            <li>
+                <a href="recommendations.html" class="active">
+                    <i class="fas fa-heart"></i>
+                    <span>Health</span>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <i class="fas fa-user"></i>
+                    <span>Profile</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="page-transition-wrapper">
+        <main class="recommendations-page">
+            <header class="page-header">
+                <div class="header-content">
+                    <h1>Health Recommendations</h1>
+                    <p class="subtitle">Personalized tips based on current air quality</p>
+                </div>
+                <div class="current-aqi">
+                    <span class="aqi-label">Current AQI</span>
+                    <div class="aqi-badge good">
+                        <span class="number">42</span>
+                        <span class="text">Good</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="recommendations-container">
+                <section class="immediate-actions">
+                    <h2>Today's Recommendations</h2>
+                    <div class="action-cards">
+                        <div class="action-card priority">
+                            <div class="card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Best Time for Outdoor Activities</h3>
+                                <p class="recommendation">5:00 AM - 8:00 AM</p>
+                                <p class="description">Air quality is optimal during early morning hours</p>
+                            </div>
+                        </div>
+                        <div class="action-card">
+                            <div class="card-icon">
+                                <i class="fas fa-running"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Exercise Recommendations</h3>
+                                <ul class="recommendation-list">
+                                    <li>Safe for outdoor exercise</li>
+                                    <li>Maintain normal activity levels</li>
+                                    <li>Stay hydrated</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="action-card">
+                            <div class="card-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="card-content">
+                                <h3>Indoor Air Quality</h3>
+                                <ul class="recommendation-list">
+                                    <li>Open windows during morning hours</li>
+                                    <li>Use air purifiers if available</li>
+                                    <li>Monitor indoor ventilation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="health-groups">
+                    <h2>Recommendations by Health Group</h2>
+                    <div class="group-tabs">
+                        <button class="group-tab active" data-group="general">General Population</button>
+                        <button class="group-tab" data-group="sensitive">Sensitive Groups</button>
+                        <button class="group-tab" data-group="children">Children</button>
+                        <button class="group-tab" data-group="elderly">Elderly</button>
+                    </div>
+                    <div class="group-content">
+                        <div class="safety-level">
+                            <div class="level-indicator safe">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Safe for Outdoor Activities</span>
+                            </div>
+                        </div>
+                        <div class="precautions">
+                            <h3>Recommended Precautions</h3>
+                            <ul class="precaution-list">
+                                <li>
+                                    <i class="fas fa-check"></i>
+                                    <span>No special precautions needed</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>Monitor air quality if planning extended outdoor activities</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="protection-guide">
+                    <h2>Protection Guide</h2>
+                    <div class="protection-grid">
+                        <div class="protection-card">
+                            <img src="assets/mask-types.svg" alt="Types of masks" class="protection-image">
+                            <h3>Mask Selection</h3>
+                            <div class="protection-content">
+                                <ul class="mask-types">
+                                    <li class="recommended">
+                                        <span class="mask-name">Regular Mask</span>
+                                        <span class="status">Suitable for today</span>
+                                    </li>
+                                    <li>
+                                        <span class="mask-name">N95 Mask</span>
+                                        <span class="status">Not required today</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="protection-card">
+                            <img src="assets/activities.svg" alt="Activity recommendations" class="protection-image">
+                            <h3>Activity Modifications</h3>
+                            <div class="activity-recommendations">
+                                <div class="activity-item safe">
+                                    <i class="fas fa-walking"></i>
+                                    <span>Walking</span>
+                                </div>
+                                <div class="activity-item safe">
+                                    <i class="fas fa-running"></i>
+                                    <span>Running</span>
+                                </div>
+                                <div class="activity-item safe">
+                                    <i class="fas fa-bicycle"></i>
+                                    <span>Cycling</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="emergency-info">
+                    <h2>Emergency Information</h2>
+                    <div class="emergency-card">
+                        <div class="emergency-header">
+                            <i class="fas fa-phone-alt"></i>
+                            <h3>Emergency Contacts</h3>
+                        </div>
+                        <div class="emergency-contacts">
+                            <div class="contact-item">
+                                <span class="contact-label">Air Quality Hotline:</span>
+                                <span class="contact-value">1-800-AIR-HELP</span>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Emergency Services:</span>
+                                <span class="contact-value">911</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/recommendations.js"></script>
+</body>
+</html> 
